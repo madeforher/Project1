@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:JourneyID xmlns:tns="http://www.example.org/FormXMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/FormXMLSchema FormXMLSchema.xsd ">
+  <tns:FirstName>tns:FirstName</tns:FirstName>
+  <tns:journeyDate>2001-01-01</tns:journeyDate>
+  <tns:LastName>tns:LastName</tns:LastName>
+  <tns:startAddress>
+    <tns:addressLine1>10 pooley street</tns:addressLine1>
+  </tns:startAddress>
+  <tns:MobileNumber>054325436</tns:MobileNumber>
+  <tns:TimeRequired>06:00:00</tns:TimeRequired>
+  <tns:destination>
+    <tns:addressLine1>810 gt south road</tns:addressLine1>
+  </tns:destination>
+  <tns:EmailAddress>kathleen@email.com</tns:EmailAddress>
+</tns:JourneyID>

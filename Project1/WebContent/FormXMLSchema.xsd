@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ProjPrefix:schema targetNamespace="http://www.example.org/FormXMLSchema" elementFormDefault="qualified" xmlns:ProjPrefix="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/FormXMLSchema">
 
-    <ProjPrefix:element name="FirstName" type="tns:name"></ProjPrefix:element>
 
-    <ProjPrefix:element name="LastName" type="tns:name"></ProjPrefix:element>
 
-    <ProjPrefix:element name="MobileNumber" type="tns:mobileNumber"></ProjPrefix:element>
 
-    <ProjPrefix:element name="EmailAddress" type="tns:emailAddress">
-    </ProjPrefix:element>
     
-    <ProjPrefix:element name="TripDate" type="ProjPrefix:date"></ProjPrefix:element>
 
-    <ProjPrefix:element name="StartAddress" type="tns:address"></ProjPrefix:element>
 
-    <ProjPrefix:element name="FinishAddress" type="tns:address"></ProjPrefix:element>
 
-    <ProjPrefix:element name="StartorFinishTime" type="tns:time"></ProjPrefix:element>
 
     <ProjPrefix:element name="CreateAccount" type="tns:createAccount">
     </ProjPrefix:element>
@@ -41,7 +32,6 @@
 
     <ProjPrefix:simpleType name="name">
     	<ProjPrefix:restriction base="ProjPrefix:string">
-    		<ProjPrefix:pattern value="[A-Z]+[a-z]"></ProjPrefix:pattern>
     		<ProjPrefix:minLength value="2"></ProjPrefix:minLength>
     		<ProjPrefix:maxLength value="50"></ProjPrefix:maxLength>
     	</ProjPrefix:restriction>
@@ -118,5 +108,31 @@
     </ProjPrefix:simpleType>
 
 
-    <ProjPrefix:element name="JourneyID" type="ProjPrefix:ID"></ProjPrefix:element>
+    <ProjPrefix:element name="JourneyID" type="tns:JourneyID"></ProjPrefix:element>
+
+    <ProjPrefix:complexType name="JourneyID">
+    	<ProjPrefix:sequence>
+    		<ProjPrefix:element name="FirstName" type="tns:name">
+    		</ProjPrefix:element>
+    		<ProjPrefix:element name="journeyDate"
+    			type="ProjPrefix:date">
+    		</ProjPrefix:element>
+    		<ProjPrefix:element name="LastName" type="tns:name">
+    		</ProjPrefix:element>
+    		<ProjPrefix:element name="startAddress"
+    			type="tns:address">
+    		</ProjPrefix:element>
+    		<ProjPrefix:element name="MobileNumber"
+    			type="tns:mobileNumber">
+    		</ProjPrefix:element>
+    		<ProjPrefix:element name="TimeRequired" type="tns:time">
+    		</ProjPrefix:element>
+    		<ProjPrefix:element name="destination" type="tns:address">
+    		</ProjPrefix:element>
+    		<ProjPrefix:element name="EmailAddress"
+    			type="tns:emailAddress">
+    		</ProjPrefix:element>
+    	</ProjPrefix:sequence>
+
+    </ProjPrefix:complexType>
 </ProjPrefix:schema>
