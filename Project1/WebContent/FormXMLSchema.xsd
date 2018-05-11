@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProjPrefix:schema targetNamespace="http://www.example.org/FormXMLSchema" elementFormDefault="qualified" xmlns:ProjPrefix="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/FormXMLSchema">
+
+    <ProjPrefix:element name="FirstName" type="tns:name"></ProjPrefix:element>
+
+    <ProjPrefix:element name="LastName" type="tns:name"></ProjPrefix:element>
+
+    <ProjPrefix:element name="MobileNumber" type="tns:mobileNumber"></ProjPrefix:element>
+
+    <ProjPrefix:element name="EmailAddress" type="tns:emailAddress">
+    </ProjPrefix:element>
+    
+    <ProjPrefix:element name="TripDate" type="ProjPrefix:date"></ProjPrefix:element>
+
+    <ProjPrefix:element name="StartAddress" type="tns:address"></ProjPrefix:element>
+
+    <ProjPrefix:element name="FinishAddress" type="tns:address"></ProjPrefix:element>
+
+    <ProjPrefix:element name="StartorFinishTime" type="tns:time"></ProjPrefix:element>
+
+    <ProjPrefix:element name="CreateAccount" type="tns:createAccount">
+    </ProjPrefix:element>
+
+
+    <ProjPrefix:simpleType name="emailAddress">
+    	<ProjPrefix:restriction base="ProjPrefix:string"></ProjPrefix:restriction>
+    </ProjPrefix:simpleType>
+
+    <ProjPrefix:simpleType name="createAccount">
+    	<ProjPrefix:restriction base="ProjPrefix:boolean">
+    	</ProjPrefix:restriction>
+    </ProjPrefix:simpleType>
+
+    <ProjPrefix:complexType name="address">
+    	<ProjPrefix:sequence>
+    		<ProjPrefix:element name="addressLine1"
+    			type="ProjPrefix:string">
+    		</ProjPrefix:element>
+    	</ProjPrefix:sequence>
+    </ProjPrefix:complexType>
+
+    <ProjPrefix:simpleType name="name">
+    	<ProjPrefix:restriction base="ProjPrefix:string">
+    		<ProjPrefix:pattern value="[A-Z]+[a-z]"></ProjPrefix:pattern>
+    		<ProjPrefix:minLength value="2"></ProjPrefix:minLength>
+    		<ProjPrefix:maxLength value="50"></ProjPrefix:maxLength>
+    	</ProjPrefix:restriction>
+    </ProjPrefix:simpleType>
+
+    <ProjPrefix:simpleType name="time">
+    	<ProjPrefix:restriction base="ProjPrefix:time">
+    		<ProjPrefix:enumeration value="06:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="06:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="06:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="06:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="07:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="07:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="07:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="07:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="08:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="08:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="08:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="08:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="09:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="09:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="09:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="09:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="10:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="10:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="10:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="10:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="11:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="11:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="11:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="11:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="12:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="12:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="12:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="12:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="13:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="13:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="13:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="13:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="14:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="14:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="14:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="14:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="15:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="15:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="15:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="15:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="16:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="16:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="16:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="16:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="17:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="17:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="17:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="17:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="18:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="18:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="18:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="18:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="19:00:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="19:15:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="19:30:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="19:45:00"></ProjPrefix:enumeration>
+    		<ProjPrefix:enumeration value="20:00:00"></ProjPrefix:enumeration>
+    	</ProjPrefix:restriction>
+    </ProjPrefix:simpleType>
+
+    <ProjPrefix:simpleType name="mobileNumber">
+    	<ProjPrefix:restriction base="ProjPrefix:int">
+    		<ProjPrefix:pattern
+    			value="\d+\d+\d+\d+\d+\d+\d+\d">
+    		</ProjPrefix:pattern>
+    	</ProjPrefix:restriction>
+    </ProjPrefix:simpleType>
+
+</ProjPrefix:schema>
